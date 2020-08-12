@@ -23,7 +23,7 @@
         let element = document.getElementById("rabbit");
         element.style.left = parseInt(element.style.left) + 7 + 'px';
     }
-    function move() {
+    function move(evt) {
         switch (evt.keyCode) {
             case 37:
                 leftArrowPressed();
