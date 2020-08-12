@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sukienbanphim</title>
+</head>
+<body onload="doc()">
+<img id="rabbit" src="https://img2.thuthuatphanmem.vn/uploads/2019/02/22/chu-soc-lan-lon_111222359.gif" style="position: absolute;left: 0;top: 0;" height="200" width="160"/>
+<script>
+    function upArrowPressed() {
+        let element = document.getElementById("rabbit");
+        element.style.top = parseInt(element.style.top) - 7 +'px';
+    }
+    function downArrowPressed() {
+        let element = document.getElementById("rabbit");
+        element.style.top = parseInt(element.style.top) + 7 + 'px';
+    }
+    function leftArrowPressed() {
+        let element = document.getElementById("rabbit");
+        element.style.left = parseInt(element.style.left) - 7 +'px';
+    }
+    function rightArrowPressed() {
+        let element = document.getElementById("rabbit");
+        element.style.left = parseInt(element.style.left) + 7 + 'px';
+    }
+    function move() {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+    function doc() {
+        window.addEventListener("keydown", move);
+    }
+</script>
+
+
+</body>
+</html>
