@@ -5,16 +5,14 @@
     <title>CaulenhSwitch-case</title>
 </head>
 <body>
-<form id="month" method="post">
-    <input type="text"/>
-    <button type="button" onclick="time()" >Tính số ngày</button>
-</form>
+
+<input id="text" type="text"/>
+<button type="button" onclick="thang()" >Tính số ngày</button>
+<p id="in">Tháng có</p>
 <script>
-    function time() {
-        switch (month) {
-            case 2:
-                document.getElementById("month").innerHTML = "28 hoặc 29 ngày";
-                break;
+    function thang() {
+        let text = document.getElementById("text").value;
+        switch (text) {
             case 1:
             case 3:
             case 5:
@@ -22,19 +20,23 @@
             case 8:
             case 10:
             case 12:
-                document.getElementById("month").innerHTML = "31 ngày";
+                document.getElementById("in").innerText = "có 31 ngày";
                 break;
             case 4:
             case 6:
             case 9:
             case 11:
-                document.getElementById("month").innerHTML = "30 ngày";
+                document.getElementById("in").innerText = "có 30 ngày";
+                break;
+            case 2:
+                document.getElementById("in").innerText = "có 28 hoặc 29 ngày";
                 break;
 
 
         }
 
     }
+
 
 
 
