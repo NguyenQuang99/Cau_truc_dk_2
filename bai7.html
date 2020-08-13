@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    let sophut = +prompt("Nhập số phút đã gọi :");
+    if (sophut < 1) {
+        document.write("Không mất cước: ");
+    } else if (sophut >= 1 && sophut <=3) {
+        let cuoc = 100 * sophut;
+        document.write("Số tiền cước: " + cuoc);
+    } else if (sophut >3 && sophut <= 10) {
+        let cuoc = 100 * 3 + 250 * (sophut - 3);
+        document.write("Số tiền cước :" + cuoc);
+    } else {
+        let cuoc = 100 *3 + 250 * 7 + 500 * (sophut - 10);
+        document.write("Số tiền cước : " + cuoc);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    let doanhso = +prompt("Nhập doanh số bán hàng :");
+    if (doanhso < 1000) {
+        document.write("không được thưởng");
+    } else if (doanhso >= 1000 && doanhso < 5000 ) {
+        let hoahong = 2 /100 * doanhso;
+        document.write("Hoa hồng nhận được: " + hoahong);
+    } else if (doanhso >= 5000 && doanhso < 10000) {
+        let hoahong = 5 /100 * doanhso;
+        document.write("Hoa hồng nhận được: " + hoahong);
+    } else {
+        let hoahong = 10/100 * doanhso;
+        document.write("Hoa hồng nhận được: " + hoahong);
+    }
+
+</script>
+</body>
+</html>
