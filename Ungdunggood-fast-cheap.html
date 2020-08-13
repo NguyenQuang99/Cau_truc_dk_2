@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung_dung_Good-feat-cheap</title>
+</head>
+<body>
+<form>
+    <label><input id="good" name="conveinnet" value="good" type="checkbox" onclick="clickBtn(this.id)" style="width: 50px; height: 50px;">Good</label><br/>
+    <label><input id="fast" name="conveinnet" value="fast" type="checkbox" onclick="clickBtn(this.id)" style="width: 50px; height: 50px;">Fast</label><br/>
+    <label><input id="cheap" name="conveinnet" value="cheap" type="checkbox" onclick="clickBtn(this.id)" style="width: 50px; height: 50px;">Cheap</label><br/>
+
+</form>
+<script>
+    function clickBtn(btn) {
+        let good = document.getElementById("good");
+        let fast = document.getElementById("fast");
+        let cheap = document.getElementById("cheap");
+        switch (btn) {
+            case "good":
+                if (good.checked == true && fast.checked == true) {
+                    cheap.checked = false;
+                }
+                break;
+            case "cheap":
+                if (good.checked == true && cheap.checked == true) {
+                    fast.checked = false;
+                }
+                break;
+            case "fast" :
+                if (fast.checked == true && cheap.checked == true) {
+                    good.checked = false;
+                }
+                break;
+        }
+    }
+</script>
+</body>
+</html>
