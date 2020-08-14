@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 10</title>
+</head>
+<body>
+<script>
+    let Sodien = prompt("Nhập vào số điên :");
+    if (Sodien <= 20 && Sodien > 0) {
+        let tien = Sodien * 200;
+        alert("Số tiền điện " + tien);
+    } else if (Sodien > 20 && Sodien <= 100) {
+        let tien = 20 * 200 + (Sodien - 20) * 350;
+        alert("Số tiền điện " + tien);
+    } else {
+        let tien = 20 * 200 + 350 * 80 + (Sodien -100)*500;
+        alert("Số tiền điện " + tien);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 7</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập số a :");
+    let b = +prompt("Nhập số b :");
+    let c = +prompt("Nhập số c :");
+    let x1;
+    let x2;
+    let delta = b*b -4*a*c;
+    if (delta < 0) {
+        alert("Phương trình vô nghiệm");
+    } else if (delta == 0) {
+        let x1 = x2 = -b /(2 * a);
+        alert("Ngiệm của PT x1=x2=" + x1 );
+    } else {
+        let delta1 = Math.sqrt(delta);
+        let x1 = ( -b + delta1 ) / (2 * a);
+        let x2 = ( -b - delta1) / ( 2 * a);
+        alert("Phương trình có nghiệm x1:" + x1);
+        alert("Phương trình có nghiệm x2 :" + x2);
+    }
+
+</script>
+</body>
+</html>
