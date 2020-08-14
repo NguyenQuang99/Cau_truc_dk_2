@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GamePuzzle</title>
+</head>
+<body>
+<img id="img1" onclick="clickImg(1)" alt="1" src="https://thuthuatnhanh.com/wp-content/uploads/2019/04/hinh-girl-bikini-qua-xinh-dep.jpg" style="width: 100px" height="100px">
+<img id="img2" onclick="clickImg(2)" alt="2" src="https://thuthuatnhanh.com/wp-content/uploads/2019/04/girl-xinh-bikini-deo-kinh-den-sang-chanh.jpg" style="width: 100px" height="100px">
+<img id="img3" onclick="clickImg(3)" alt="3" src="https://thuthuatnhanh.com/wp-content/uploads/2020/05/anh-girl-xinh-nong-bong-voi-bo-bikini-ben-ho-boi-lam-hinh-nen-dien-thoai.jpg" style="width: 100px" height="100px">
+<img id="img4" onclick="clickImg(4)" alt="1" src="https://thuthuatnhanh.com/wp-content/uploads/2019/04/hinh-girl-bikini-qua-xinh-dep.jpg" style="width: 100px" height="100px">
+<img id="img5" onclick="clickImg(5)" alt="1" src="https://thuthuatnhanh.com/wp-content/uploads/2019/04/hinh-girl-bikini-qua-xinh-dep.jpg" style="width: 100px" height="100px">
+<script>
+    function clickImg(index) {
+        let img = document.getElementById("img"+index);
+        let count = +img.alt;
+        count = Math.floor(Math.random()*3+1);
+
+        img.alt = count;
+        img.src = "images/anh"+ count+".jpg";
+        checkWin();
+    }
+
+    function checkWin() {
+        if(getImg(1).alt === getImg(2).alt && getImg(2).alt === getImg(3).alt && getImg(3).alt         === getImg(4).alt&& getImg(4).alt === getImg(5).alt){
+            setTimeout(function () {
+                alert("You win");
+            },100);
+
+        }
+    }
+
+    function getImg(index) {
+        return document.getElementById("img"+index);
+    }
+</script>
+
+</body>
+</html>
