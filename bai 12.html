@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bai 12</title>
+    <title>Title</title>
 </head>
 <body>
 <script>
-    let tiengui = +prompt("Nhập số tiền gửi :");
-    let sothang = + prompt("Nhập số tháng gửi:");
-    let laisuatnam = +prompt("Nhập lãi suất hàng năm :");
-    let sotienlai =tiengui * (laisuatnam /1200 ) / 12 * sothang;
-    alert("Số tiền lãi :" + sotienlai);
+    let loan = +prompt("Nhập số tiền vay :");
+    let loanMonths = +prompt("Nhập số tháng vay :");
+    let monthlyInterest = +prompt("Nhập số lãi hàng tháng: (%)");
+    let month = +prompt("Nhập số tháng muốn nộp:");
+    let interestPerMonths = loan * monthlyInterest/100;
+    let interest = interestPerMonths * loanMonths;
+    let x = ( loan + interest) * monthlyInterest/100;
+    let y = loanMonths + month;
+    alert("Tiền lãi mỗi tháng là :" + interestPerMonths);
+    alert("Tiền lãi sau" + loanMonths + "Tháng là" + interest);
+    alert("Tiền lãi mẹ đẻ lãi con sau" + y + "Tháng là " + x);
 </script>
 </body>
 </html>
